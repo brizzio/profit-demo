@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <span class="card-title card-title-text">` + card.title + `</span>
                     </div>
                     <div class="card-content">
-                    <p>SELECIONE</p>
+                    <p>SELECIONE A OPÇÃO</p>
                     </div>
                     <div class="card-action">
                     ` + add_links(card.links) + `
