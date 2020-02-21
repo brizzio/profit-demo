@@ -1,10 +1,25 @@
+.card-com-texto{
+    min-height: 200px;
+    max-height: 200px;
+    line-height: 23px;
+
+}
+
+.card-com-links{
+    min-height: 550px;
+    max-height: 550px;
+
+}
+
 .card-image{
-    height: auto; /* Your height here */
+    height: 300px; /* Your height here */
     overflow: hidden;
 }
 
+
+
 .content-overlay {
-    background: black;
+    background: rgb(23, 2, 99);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -12,7 +27,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    opacity: 0.5;
+    opacity: 0.4;
     /*
     //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
     transition: all 0.4s ease-in-out 0s;
@@ -20,7 +35,7 @@
 }
 
 .text-title{
-    font-size: x-large;
+    font-size: medium;
 }
 
 .text-subtitle{
@@ -28,8 +43,8 @@
 }
 
 .logo-img{
-    margin: 0;
-    padding:0;
+    margin-left: 22px;
+    padding:5px;
     height:60px;
 }
 
@@ -37,13 +52,22 @@
     margin: 0;
     padding:0;
     height:90px;
+    font-size: medium;
 }
 
-.card-title{
-    font-size: x-large;
+.card .card-image span{
+    font-size: 30px;
+    font-weight: 400;
+    
 }
 
-.lnk{
-    padding:20px;
-    margin-top: 20px;
+.lnk span{
+    
+    font-size: 20px;
+    text-align: center;
+    color:rgb(19, 5, 150);
+}
+
+.divider{
+    margin-bottom:5px;
 }
