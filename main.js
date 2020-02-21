@@ -2,11 +2,11 @@ var api_url ='https://tinyurl.com/profit-api'
 
 let card1 = {
     icon:"tune",
-    title: "Parametros de Pricing",
+    title: "Cadastro e Parâmetros",
     img:"https://www.futureagenda.org/wp-content/uploads/2019/02/iStock_000003287087Medium-1280x800-c-center.jpg",
     panel_color:"indigo darken-1",
-    subtitle:"Nesta seção você pode definir as metas de faturamento, as margens minimas e máximas com as quais deseja trabalhar e quais produtos podem ou não seguir as indicações do sistema PROFIT+ ARTIFICIAL INTELLIGENCE",
-    links:[{title:"DEFINIR METAS",  go_to:"#"},{title:"PARAMETROS DE PRICING",  go_to:"#"}]
+    subtitle:"Cálculos e definição de metas e parâmetros estratégicos que resultarão nas recomendações de preços para todas as categorias, produtos e lojas.",
+    links:[{title:"DEFINIR METAS",  go_to:"#"},{title:"PARÂMETROS DE PRICING",  go_to:"#"}]
 }
 
 let card2 = {
@@ -14,8 +14,8 @@ let card2 = {
     title: "Gestão de Pesquisas",
     img:"https://apicms.thestar.com.my/uploads/images/2019/10/29/353925.png",
     panel_color:"deep-purple accent-2",
-    subtitle:"Aqui você pode explorar os dados originados das pesquisas feitas junto aos concorrentes. Aqui voce encontra também um painel de controle para alterar o direcionamento dos nossos pesquisadores.",
-    links:[{title:"DADOS DE PESQUISA",  go_to:"#"},{title:"AGENDAMENTO",  go_to:"#"},{title:"CONCORRENTES",  go_to:"#"}]
+    subtitle:"Definição do Cronograma de Pesquisas e Análise dos dados de produtos e preços coletados nos concorrentes, que serão utilizados nas recomendações de preços.",
+    links:[{title:"CRONOGRAMA",  go_to:"#"},{title:"AGENDAMENTO",  go_to:"#"},{title:"RECEBIMENTO",  go_to:"#"}]
 }
 
 let card3 = {
@@ -23,25 +23,25 @@ let card3 = {
     title: "Gestão de Preços",
     img:"https://www.supermarketnews.com/sites/supermarketnews.com/files/styles/article_featured_retina/public/Giant_Camp_Hill_Beer__Wine_Eatery_1_0.png?itok=YjELWc2P",
     panel_color:"pink darken-4",
-    subtitle:"Aqui você encontra a lista completa de produtos com o seu respectivo preço, resultado do sistema de pricing PROFIT+. O painel permite a edição direta do preço final e exporta  para o ERP.",
+    subtitle:"Análise das Recomendações de Preços com base nos parâmetros e inteligência artificial, onde é possível visualizar o cálculo dos impactos em competitividade e margens antes da exportação ao Sistema ERP da empresa.",
     links:[
-        {title:"LISTA DE PREÇOS DE PRODUTOS",  go_to:"#"},
-        {title:"DOWNLOAD DE ARQUIVOS",  go_to:"#"}
+        {title:"PREÇOS REGULARES",  go_to:"#"},
+        {title:"ANÁLISE DE CENÁRIOS",  go_to:"#"}
     ]
 
 }
 
 let card4 = {
     icon:"insert_chart",
-    title: "Analitics",
+    title: "Análises e Negociações",
     img:"https://i1.wp.com/blog.idwall.co/wp-content/uploads/2019/08/woman-holding-phone-browsing-social-media-1.jpg?fit=800%2C534&ssl=1",
     panel_color:"green accent-4",
-    subtitle:"Aqui voce tem acesso a um sistema completo de Business Inteligence (BI) com a consolidação dos dados da rede de lojas e as informações da concorrência.",
+    subtitle:"Painéis de B.I. (Business Intelligence) com análises de competitividade, vendas, margens e dados para potencializar a negociação com fornecedores.",
     links:[
         {title:"COMPETITIVIDADE",  go_to:"#"},
         {title:"DADOS DE PESQUISAS",  go_to:"#"},
-        {title:"SORTIMENTO",  go_to:"#"},
-        {title:"GESTÃO COMERCIAL",  go_to:"#"},
+        {title:"SORTIMENTO PDV",  go_to:"#"},
+        {title:"GESTÃO DE CATEGORIAS",  go_to:"#"},
         {title:"NEGOCIAÇÕES",  go_to:"#"}
     ]
 }
@@ -63,17 +63,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 <i class="large material-icons white-text text-darken-4">` + card.icon + `</i>
     
                 </div>
-                <div class="card-panel">
+                <div class="card-panel card-com-texto">
                     <span class="blue-text text-subtitle">` + card.subtitle + `</span>
                 </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="` + card.img + `">
-                    <div class="content-overlay"></div>
-                    <span class="card-title card-title-text">` + card.title + `</span>
-                    </div>
-                    <div class="card-content">
-                    <p>SELECIONE</p>
+                <div class="card card-com-links">
+                    <div class="card-image" style="background-image: url(` + card.img + `); background-size: cover;">
+                        <div class="content-overlay"></div>
+                        <span class="card-title card-title-text z-depth-5">` + card.title + `</span>
                     </div>
                     <div class="card-action">
                     ` + add_links(card.links) + `
@@ -94,8 +90,7 @@ function add_links(links){
     let string_html = ''
     links.forEach(function (link, index) {
         string_html +=`
-            <a class="lnk" href="`+ link.go_to + `">`+ link.title + `</a>
-            </br>
+            <a class="lnk" href="`+ link.go_to + `"><span>`+ link.title + `</span></a>
             <div class="divider"></div>             
         `    
     })
