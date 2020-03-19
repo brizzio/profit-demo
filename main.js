@@ -6,7 +6,7 @@ let card1 = {
     img:"https://www.futureagenda.org/wp-content/uploads/2019/02/iStock_000003287087Medium-1280x800-c-center.jpg",
     panel_color:"indigo darken-1",
     subtitle:"Cálculos e definição de metas e parâmetros estratégicos que resultarão nas recomendações de preços para todas as categorias, produtos e lojas.",
-    links:[{title:"DEFINIR METAS",  go_to:",/metas.html"},{title:"PARÂMETROS DE PRICING",  go_to:"#"}]
+    links:[{title:"DEFINIR METAS",  go_to:"./metas.html"},{title:"PARÂMETROS DE PRICING",  go_to:"#"}]
 }
 
 let card2 = {
